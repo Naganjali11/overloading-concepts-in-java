@@ -1,13 +1,17 @@
-package com.codegnan.oop.overloading;
+package com.codegnan.oop.overriding;
 
-public class Employee {
+public abstract class Employee {
 	String name;
-	double salary;
-	public Employee() {
+	Employee(String name) {
+		this.name = name;
 	}
-	public void displayDetails() {
-		System.out.println("Name:" +name);
-		System.out.println("Salary:"+salary);
+	// Abstract method
+	abstract double calculateSalary();
+	// Concrete method
+	void display() {
+		System.out.println("Employee Name: " + name);
 	}
-
 }
+
+
+
